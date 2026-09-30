@@ -1,0 +1,20 @@
+# Copyright (c) 2021, ATL Electronics
+# Copyright (c) 2026 Zewen Zhu
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_SERIES_GD32F30X
+	bool
+	select SOC_FAMILY_GD_GD32
+	help
+	  Enable support for GigaDevice GD32F30x MCU series (F301/F302/F303/
+	  F305/F307, Cortex-M4, high-density)
+
+config SOC_SERIES
+	default "gd32f30x" if SOC_SERIES_GD32F30X
+
+config SOC_GD32F303
+	bool
+	select SOC_SERIES_GD32F30X
+
+config SOC
+	default "gd32f303" if SOC_GD32F303
