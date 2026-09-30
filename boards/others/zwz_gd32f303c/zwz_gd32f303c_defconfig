@@ -1,0 +1,11 @@
+# Copyright (c) 2026 Zewen Zhu
+# SPDX-License-Identifier: Apache-2.0
+
+CONFIG_ARM_MPU=y
+CONFIG_HW_STACK_PROTECTION=y
+
+# Console output goes to SEGGER RTT (channel 0) and is read through the
+# J-Link/SWD connector: no UART is routed to a debug connector on this board.
+CONFIG_CONSOLE=y
+CONFIG_USE_SEGGER_RTT=y
+CONFIG_RTT_CONSOLE=y

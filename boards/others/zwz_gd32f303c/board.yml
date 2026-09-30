@@ -1,0 +1,6 @@
+board:
+  name: zwz_gd32f303c
+  full_name: ZWZ GD32F303CBT6
+  vendor: others
+  socs:
+    - name: gd32f303

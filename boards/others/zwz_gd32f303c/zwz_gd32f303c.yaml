@@ -1,0 +1,9 @@
+identifier: zwz_gd32f303c
+name: ZWZ GD32F303CBT6
+type: mcu
+arch: arm
+ram: 32
+flash: 128
+toolchain:
+  - zephyr
+vendor: others

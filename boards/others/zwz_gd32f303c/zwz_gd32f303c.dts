@@ -1,0 +1,19 @@
+/*
+ * Copyright (c) 2026 Zewen Zhu
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+/dts-v1/;
+
+#include <gd/gd32f30x/gd32f303cbt6.dtsi>
+
+/ {
+	model = "ZWZ GD32F303CBT6";
+	compatible = "gd,gd32f303c";
+
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+		zephyr,flash-controller = &fmc;
+	};
+};
