@@ -55,6 +55,13 @@ if(${CONFIG_SOC_SERIES_GD32A50X})
   zephyr_compile_definitions(GD32A50X)
 endif()
 
+# GD32F30X series HAL public headers require extra definitions
+if(${CONFIG_SOC_SERIES_GD32F30X})
+  if(${CONFIG_SOC_GD32F303})
+    zephyr_compile_definitions(GD32F30X_HD)
+  endif()
+endif()
+
 # Global includes to be used outside hal_gigadevice
 zephyr_include_directories(${gd32_soc_sys_dir}/include)
 zephyr_include_directories(${gd32_std_dir}/include)
